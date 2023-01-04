@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to add video on website</title>
+
+    <style>
+
+        *,
+        ::before,
+        ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html{
+            font-size: 10px;
+        }
+
+        body{
+            box-sizing: border-box;
+        }
+
+        header {
+           background-color: #f1f3f4;
+        }
+
+        .header__wrapper{
+            width: 1100px;
+           margin: auto;
+           padding: 1.5rem 0rem;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+        }
+
+        header .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        header .navigation_panel {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        header .navigation_panel li:hover a{
+            color: rgb(237, 143, 1);
+        }
+
+        header .navigation_panel a {
+            text-decoration: none;
+            font-size: 2rem; 
+            color: rgb(0, 0, 0); 
+            font-weight: 500;         
+        }
+
+        h1{
+            background-color: #f1f3f4;
+            color: rgb(0, 0, 0);
+        }
+
+
+
+        main{
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+
+        }
+
+        .input__area {
+            background-color: #f1f3f4;
+            padding: 3rem;
+            margin-bottom: 5rem;
+            width: 500px;
+        }
+
+        .input__area input {
+           border: 0;
+           padding: 1rem;
+           height: 5rem;
+           width: 100%;
+           display: block;
+        }
+
+        label {
+           font-size: 2rem;
+           display: block;
+           margin: 1rem;
+        }
+
+        .radio__field {
+            display: flex;
+            /* padding: 3rem 0rem; */
+            justify-content: space-around;
+        }  
+        .radio__field label {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            font-size: 2rem;
+        }
+
+        fieldset{
+            margin-top: 3rem;
+        }
+
+        .remember__me {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .remember__me input {
+            height: 2rem;
+            width: 3rem;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            
+        } 
+        .btn-group > input {
+            font-size: 2rem;
+            background-color: #bfbfbf;
+            width: 48%;
+        }
+
+        footer p {
+            padding: 3rem 0rem;
+        }
+        footer p {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header__wrapper">
+            <div class="logo">
+                <a href="./index.html"><img src="./media/logo.png" alt="Logo"></a>
+            </div>
+    
+            <nav>
+                <ul class="navigation_panel">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="https://ofwebdev.github.io/newspaper">Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Welcome to practice day four</h1>
+        <video src="./media/nature.mp4" controls width="500" height="300" poster="/media/poster.jpg" style="object-fit: cover;" loop></video>
+        <audio src="./media/madiation.mp3" controls style="width : 500px"></audio>
+
+        <div class="input__area">
+            <form>
+                <label for="name"> Your Name :
+                    <input type="text" id="name">
+                </label>
+                <label for="name"> Your Mail :
+                    <input type="email" id="name">
+                </label> 
+                
+                <label for="name"> Your Phone :
+                    <input type="number" id="name">
+                </label>
+                
+                <label for="dob"> Birthday :
+                    <input type="date" id="dob">
+                </label>
+
+
+                <fieldset>
+                    <legend style="font-size: 2.5rem;">Select your gender</legend>
+                    <div class="radio__field">
+                    
+                        <label for="male">Male
+                            <input type="radio" id="male" value="male" name="gender"> 
+                        </label>
+    
+                         
+                        <label for="female">Female
+                            <input type="radio" id="female" value="female" name="gender">
+                        </label>
+    
+                        
+                        <label for="other">Others
+                            <input type="radio" id="other" value="other" name="gender">
+                        </label>
+    
+                    </div>
+                </fieldset>
+
+
+                <div class="remember__me">
+                    
+                    <input type="checkbox" name="check" id="check">
+                    <label for="check">Remember me</label>
+                </div>
+
+               <div class="btn-group">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+               </div>
+
+            </form>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>Copyright &copy; <a href="https://www.facebook.com/of.webdev">Omor Faruk</a></p>
+    </footer>
+
+
+    
+</body>
+</html>
